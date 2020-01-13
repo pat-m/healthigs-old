@@ -5,12 +5,9 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 const routes: Routes = [
     { path: "", redirectTo: "/home", pathMatch: "full" },
     { path: "home", loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule) },
-    { path: "health", loadChildren: () => import("~/app/health/health.module").then((m) => m.HealthModule) },
-    { path: "health", loadChildren: () => import("~/app/health/health.module").then((m) => m.HealthModule) },
-    { path: "browse", loadChildren: () => import("~/app/browse/browse.module").then((m) => m.BrowseModule) },
-    { path: "search", loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule) },
-    { path: "featured", loadChildren: () => import("~/app/featured/featured.module").then((m) => m.FeaturedModule) },
-    { path: "settings", loadChildren: () => import("~/app/settings/settings.module").then((m) => m.SettingsModule) }
+    { path: "health-meeting", loadChildren: () => import("~/app/health-meeting/health-meeting.module").then((m) => m.HealthMeetingModule) },
+    { path: "health-event", loadChildren: () => import("~/app/health-event/health-event.module").then((m) => m.HealthEventModule) },
+    { path: "health-partner", loadChildren: () => import("~/app/health-partner/health-partner.module").then((m) => m.HealthPartnerModule) }
 ];
 
 @NgModule({
