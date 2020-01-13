@@ -1,0 +1,57 @@
+<!--
+RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
+-->
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+        <StackLayout row="0" class="nt-drawer__header">
+<!--            <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>-->
+            <Label class="nt-drawer__header-brand" text="Healthigs" fontSize="40"></Label>
+            <Label class="nt-drawer__header-brand" text=""></Label>
+            <Label class="nt-drawer__header-footnote" text="Bienvenu"></Label>
+        </StackLayout>
+
+        <ScrollView row="1" class="nt-drawer__body">
+            <StackLayout>
+                <Label class="nt-drawer__header-footnote" text="  Health" fontSize="20"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/health/meeting')" (tap)="onNavItemTap('/health/meeting')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Rendez-vous" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/health/event')" (tap)="onNavItemTap('/health/event')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Evénements" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/health/partner')" (tap)="onNavItemTap('/health/partner')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Partenaires" class="p-r-10"></Label>
+                </GridLayout>
+                <Label class="nt-drawer__header-footnote" text="  Alimentation" fontSize="20"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/food/recipes')" (tap)="onNavItemTap('/food/recipes')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Recettes" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/food/vedges')" (tap)="onNavItemTap('/vedges')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Légumes" class="p-r-10"></Label>
+                </GridLayout>
+                <Label class="nt-drawer__header-footnote" text="  Sport" fontSize="20"></Label>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/sport/video')" (tap)="onNavItemTap('/sport/video')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Vidéo Youtube" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/sport/partners')" (tap)="onNavItemTap('/sport/partners')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Partenaires" class="p-r-10"></Label>
+                </GridLayout>
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/sport/events')" (tap)="onNavItemTap('/sport/events')">
+                    <Label col="0" text="&#xf015;" class="nt-icon far"></Label>
+                    <Label col="1" text="Evénements" class="p-r-10"></Label>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+    <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>
