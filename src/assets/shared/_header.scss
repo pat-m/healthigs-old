@@ -1,0 +1,17 @@
+ActionBar {
+  background-color: $primary;
+}
+.nt-drawer__header {
+  color: $white;
+  font-size: 20px;
+  Image {
+    max-width: 400px;
+    width: auto;
+    height: auto;
+  }
+}
+.nt-drawer__title {
+  padding: 30px 0 0 30px;
+  font-size: 20px;
+  color: $text-color;
+}
